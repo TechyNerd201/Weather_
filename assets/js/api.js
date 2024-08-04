@@ -1,6 +1,6 @@
 "use strict";
 
-const corsProxy = "https://thingproxy.freeboard.io/fetch/";
+const corsProxy = "https://cors-poilicy.glitch.me";
 const api_key = "f35433aa09321a9b6b0e8dc439c83693";
 const base_url = "https://api.openweathermap.org";
 
