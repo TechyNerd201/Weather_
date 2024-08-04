@@ -1,37 +1,30 @@
 "use strict";
 
-const api_key ="f35433aa09321a9b6b0e8dc439c83693";
+const corsProxy = "https://cors-anywhere.herokuapp.com/";
+const api_key = "f35433aa09321a9b6b0e8dc439c83693";
+const base_url = "https://api.openweathermap.org";
 
 export const fetchData = function (URL, callback) {
-  fetch(URL)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      return response.json();
-    })
+  fetch(`${corsProxy}${URL}&appid=${api_key}`)
+    .then((response) => response.json())
     .then((data) => callback(data))
-    .catch((error) => {
-      console.error('There has been a problem with your fetch operation:', error);
-    });
+    .catch((error) => console.error("Error fetching data:", error));
 };
-
-const base_url = "https://api.openweathermap.org";
 
 export const url = {
   currentWeather(lat, lon) {
-    return `${base_url}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`;
+    return `${base_url}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`;
   },
   forecast(lat, lon) {
-    return `${base_url}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`;
+    return `${base_url}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric`;
   },
   airPollution(lat, lon) {
-    return `${base_url}/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${api_key}`;
+    return `${base_url}/data/2.5/air_pollution?lat=${lat}&lon=${lon}`;
   },
   reverseGeocoding(lat, lon) {
-    return `${base_url}/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${api_key}`;
+    return `${base_url}/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5`;
   },
   geocoding(query) {
-    return `${base_url}/geo/1.0/direct?q=${query}&limit=5&appid=${api_key}`;
+    return `${base_url}/geo/1.0/direct?q=${query}&limit=5`;
   },
 };
