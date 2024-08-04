@@ -2,10 +2,6 @@
 
 This is a weather app website that provides users with current weather conditions and forecasts for cities around the world. The app utilizes the OpenWeatherMap API to retrieve weather data and displays it in a user-friendly interface.
 
-[View on Netlify](https://weather-io-app.netlify.app/)
-
-[View on Github Pages](https://billalben.github.io/weather-app/)
-
 # Features
 
 * **Modern Design**: The website features a modern and visually appealing design.
@@ -17,8 +13,6 @@ This is a weather app website that provides users with current weather condition
 * **Today's Highlights**: Users can see important weather information for today, including Air Quality Index, Sunrise & Sunset times, Humidity, Pressure, Visibility, and Feels like temperature.
 
 * **Search Bar**: The website includes a search bar where users can enter the name of a city to get weather information.
-
-* **Search Suggestions**: As the user types in the search bar, suggestions for cities are provided to make it easier to find the desired location.
 
 * **Debounce Functionality**: The app uses debounce functionality to avoid calling the API on every input change, improving performance and reducing unnecessary API requests.
 
@@ -33,7 +27,5 @@ To use the weather app, simply open the website in a web browser and enter the n
 * **JAVASCRIPT**
 * **OpenWeatherMap API**
 
-# Acknowledgments
 
-Special thanks to [codewithsadee](https://github.com/codewithsadee), for his invaluable guidance and expertise in web development.
 
