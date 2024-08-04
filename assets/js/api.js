@@ -13,7 +13,7 @@ export const fetchData = function (URL, callback) {
 };
 
 // const base_url = "http://127.0.0.1:3000";
-const base_url = "https://weather-app-server-qgr9.onrender.com";
+const base_url = "https://api.openweathermap.org";
 
 export const url = {
   currentWeather(lat, lon) {
